@@ -1,0 +1,8 @@
+ResouceManager = CS.ResourceManager.GetInstance()
+GameObject = CS.UnityEngine.GameObject
+Tween = CS.DG.Tweening
+require("Manager/TipsManager")
+
+print("All manager init")
+
+

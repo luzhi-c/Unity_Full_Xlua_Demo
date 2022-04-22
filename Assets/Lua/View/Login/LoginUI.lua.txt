@@ -1,0 +1,33 @@
+local UIBase = require("Base.UIBase")
+
+local LoginUI = {}
+setmetatable(LoginUI, { __index = UIBase })
+
+
+--ui 引用
+local Btn_StartGame = nil
+function LoginUI.Create()
+    local ui = {}
+    setmetatable(ui, { __index = LoginUI})
+    ui.name = "LoginUI"
+    ui.url = "LoginUI"
+    ui:OnOpen()
+    return ui
+end
+
+function LoginUI: Init()
+    print("loginUI 初始化")
+
+    Btn_StartGame = self.uiComponent["Btn_StartGame"]:GetComponent("Button")
+
+    Btn_StartGame.onClick:AddListener(function ()
+        self:OnClickStartGame()
+    end)
+end
+
+function LoginUI:OnClickStartGame()
+    -- self.obj:SetActive(false)
+    TipsManager.ShowTips("你好,冒险家")
+end
+
+return LoginUI

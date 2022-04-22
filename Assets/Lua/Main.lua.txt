@@ -1,0 +1,8 @@
+local UIManager = require("Manager/UIManager")
+local LoginUI = require("View.Login.LoginUI")
+local Main = {}
+function Main.StartGame()
+    LoginUI.Create()
+end
+
+return Main

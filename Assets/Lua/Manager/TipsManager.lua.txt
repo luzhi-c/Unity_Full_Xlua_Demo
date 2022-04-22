@@ -1,0 +1,32 @@
+local Tips = require("View.Base.Tips")
+
+TipsManager = {}
+
+TipsManager.tipsList = {}
+
+TipsManager._Instance = nil
+
+function TipsManager.ShowTips(str)
+    local list = TipsManager.tipsList
+    local tip
+    if #list > 0 then
+        tip = table.remove(list, 1)
+    else
+        if TipsManager._Instance == nil then
+            TipsManager._Instance = ResouceManager:LoadPrefab("Tips")
+        end
+        local clone = GameObject.Instantiate(TipsManager._Instance)
+        tip = Tips.Create(clone)
+    end
+    print(tip)
+    tip:ShowTips(str)
+    return tip
+end
+
+--隐藏 并放入列表以便复用
+function TipsManager.HideTips(tips)
+    tips.obj: SetActive(false)
+    table.insert(TipsManager.tipsList, #TipsManager.tipsList + 1, tips)
+end
+
+return TipsManager

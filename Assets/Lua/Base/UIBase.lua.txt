@@ -1,0 +1,48 @@
+local UIBase = {}
+
+UIBase.name = nil
+UIBase.url = nil
+UIBase.obj = nil
+UIBase.layer = nil
+UIBase.uiComponent = {}
+
+function UIBase: OnOpen()
+    UI.LoadUI(self, self.url and self.url or self.name, self.layer)
+    self:FindComponent(self.obj.transform)
+
+    self:Init()
+end
+
+function UIBase: BindUI(ui)
+    self.obj = ui
+    self:FindComponent(self.obj.transform)
+
+    self:Init()
+end
+
+function UIBase: Init()
+    print("初始化成功")
+end
+
+function UIBase:FindComponent(root)
+    for i = 0, root.childCount - 1 do
+        local child = root:GetChild(i)
+        print(child)
+        if child.gameObject:CompareTag("UIComponent") then
+            self.uiComponent[child.gameObject.name] = child.gameObject
+        end
+        if child.childCount > 0 then
+            self:FindComponent(child)
+        end
+    end
+end
+
+function UIBase: OnClose()
+    if not IsNull(self.obj) then
+        GameObject.Destroy(self.obj)
+    end
+    self.obj = nil
+    self.uiComponent = nil
+end
+
+return UIBase

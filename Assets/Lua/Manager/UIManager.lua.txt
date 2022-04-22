@@ -1,0 +1,43 @@
+UI = {}
+
+UI.Zorder = {
+    Dialog = 1,
+    Pop = 100,
+    Top = 1000
+}
+local CanvasRoot = GameObject.Find("Canvas").transform
+
+UI.UIStack = {}
+
+function UI:Init()
+    
+end
+
+function UI.LoadUI(obj, url, layer)
+   local go =  ResouceManager:LoadUI(url)
+   go.transform:SetParent(CanvasRoot, false)
+   go.transform:SetSiblingIndex(layer and layer or UI.Zorder.Dialog)
+
+   obj.obj = go
+   UI.UIStack[url] = obj
+end
+
+function UI.ShowTips(obj)
+    obj.transform:SetParent(CanvasRoot, false)
+    obj.transform:SetSiblingIndex(UI.Zorder.Dialog)
+ 
+end
+
+function UI.LoadPrefab(url)
+    local go = ResouceManager: LoadPrefab(url)
+    return go
+end
+
+function UI.CloseUI(url)
+    if UI.UIStack[url] ~= nil then
+        UI.UIStack[url]:OnClose()
+    end
+    UI.UIStack[url] = nil
+end
+
+return UI

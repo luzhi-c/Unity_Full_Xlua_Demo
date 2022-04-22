@@ -1,0 +1,22 @@
+require("System.Init")
+
+
+function IsNull(obj)
+    if (obj == nil or obj:Equals(nil)) then
+        return true
+    end
+    return false
+end
+local _Main = require("Main")
+
+function start()
+    _Main.StartGame()
+end
+
+function update()
+    
+end
+
+function ondestroy()
+    
+end

@@ -1,0 +1,37 @@
+local UIBase = require("Base.UIBase")
+local Tips = {}
+setmetatable(Tips, { __index = UIBase })
+
+local Text_Tips = nil
+function Tips.Create(base)
+    local ui = {}
+
+    setmetatable(ui, { __index = Tips })
+    ui.name = "Tips"
+    ui.url = "Tips"
+    ui.layer = UI.Zorder.Top
+    -- 直接绑定组件
+    ui:BindUI(base)
+    -- 显示
+    UI.ShowTips(ui.obj)
+    return ui
+end
+
+function Tips: ShowTips(str)
+    --复用的时候把自己设置为可见
+    self.obj: SetActive(true)
+    self.obj.transform.localPosition = CS.Vector3.zero
+    Text_Tips.text = str
+    self:DoTween()
+end
+function Tips: Init()
+    Text_Tips = self.uiComponent["Text_Tips"]:GetComponent("Text")
+end
+
+function Tips: DoTween()
+    self.obj.transform:DOLocalMoveY(100, 0.5):OnComplete(function ()
+        TipsManager.HideTips(self)
+    end)
+end
+
+return Tips
