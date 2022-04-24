@@ -7,10 +7,13 @@ UIBase.layer = nil
 UIBase.uiComponent = {}
 
 function UIBase: OnOpen()
-    UI.LoadUI(self, self.url and self.url or self.name, self.layer)
-    self:FindComponent(self.obj.transform)
+    -- UI.LoadUI(self, self.url and self.url or self.name, self.layer)
 
-    self:Init()
+    UI.LoadUIAsync(self, self.url, self.layer , function ()
+        self:FindComponent(self.obj.transform)
+        self:Init()
+    end)
+    
 end
 
 function UIBase: BindUI(ui)
@@ -43,6 +46,12 @@ function UIBase: OnClose()
     end
     self.obj = nil
     self.uiComponent = nil
+
+    self: OnClosed()
+end
+
+function UIBase: OnClosed()
+    
 end
 
 return UIBase

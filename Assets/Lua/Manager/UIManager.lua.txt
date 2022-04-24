@@ -22,6 +22,20 @@ function UI.LoadUI(obj, url, layer)
    UI.UIStack[url] = obj
 end
 
+function UI.LoadUIAsync(obj, url, layer, callback)
+    ResouceManager:LoadPrefabAsync(url, function (go)
+        local go =  GameObject.Instantiate(go)
+        go.transform:SetParent(CanvasRoot, false)
+        go.transform:SetSiblingIndex(layer and layer or UI.Zorder.Dialog)
+     
+        obj.obj = go
+        UI.UIStack[url] = obj
+        if callback ~= nil then
+            callback()
+        end
+    end)
+end
+
 function UI.ShowTips(obj)
     obj.transform:SetParent(CanvasRoot, false)
     obj.transform:SetSiblingIndex(UI.Zorder.Dialog)

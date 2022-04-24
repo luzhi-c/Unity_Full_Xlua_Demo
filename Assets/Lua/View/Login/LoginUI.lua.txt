@@ -6,7 +6,6 @@ setmetatable(LoginUI, { __index = UIBase })
 
 local times = 1
 --ui 引用
-local Btn_StartGame = nil
 function LoginUI.Create()
     local ui = {}
     setmetatable(ui, { __index = LoginUI})
@@ -19,10 +18,15 @@ end
 function LoginUI: Init()
     print("loginUI 初始化")
 
-    Btn_StartGame = self.uiComponent["Btn_StartGame"]:GetComponent("Button")
+    self.Btn_StartGame = self.uiComponent["Btn_StartGame"]:GetComponent("Button")
+    self.Btn_ExitGame = self.uiComponent["Btn_ExitGame"]:GetComponent("Button")
 
-    Btn_StartGame.onClick:AddListener(function ()
+    self.Btn_StartGame.onClick:AddListener(function ()
         self:OnClickStartGame()
+    end)
+
+    self.Btn_ExitGame.onClick:AddListener(function ()
+        self:OnClickExitGame()
     end)
 end
 
@@ -30,6 +34,14 @@ function LoginUI:OnClickStartGame()
     -- self.obj:SetActive(false)
     TipsManager.ShowTips("你好,冒险家" .. times)
     times = times + 1;
+end
+
+function LoginUI:OnClickExitGame()
+    self:OnClose()
+end
+
+function LoginUI: OnClosed()
+   
 end
 
 return LoginUI
