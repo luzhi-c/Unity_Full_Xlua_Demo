@@ -4,6 +4,7 @@ local LoginUI = {}
 setmetatable(LoginUI, { __index = UIBase })
 
 
+local times = 1
 --ui 引用
 local Btn_StartGame = nil
 function LoginUI.Create()
@@ -27,7 +28,8 @@ end
 
 function LoginUI:OnClickStartGame()
     -- self.obj:SetActive(false)
-    TipsManager.ShowTips("你好,冒险家")
+    TipsManager.ShowTips("你好,冒险家" .. times)
+    times = times + 1;
 end
 
 return LoginUI

@@ -26,8 +26,6 @@ public class GameStart : MonoBehaviour
     private void Awake()
     {
 
-
-        
         luaEnv.AddLoader(CustomLoader);
 
 

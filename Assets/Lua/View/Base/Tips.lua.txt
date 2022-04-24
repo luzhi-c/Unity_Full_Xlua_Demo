@@ -22,6 +22,7 @@ function Tips: ShowTips(str)
     self.obj: SetActive(true)
     self.obj.transform.localPosition = CS.Vector3.zero
     Text_Tips.text = str
+    print(str)
     self:DoTween()
 end
 function Tips: Init()

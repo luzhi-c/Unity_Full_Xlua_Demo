@@ -33,6 +33,10 @@ function UI.LoadPrefab(url)
     return go
 end
 
+function UI.LoadPrefabAsync(url, callback)
+    ResouceManager:LoadPrefabAsync(url, callback)
+end
+
 function UI.CloseUI(url)
     if UI.UIStack[url] ~= nil then
         UI.UIStack[url]:OnClose()

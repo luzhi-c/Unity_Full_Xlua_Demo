@@ -1,26 +1,47 @@
 local Tips = require("View.Base.Tips")
-
 TipsManager = {}
 
 TipsManager.tipsList = {}
 
 TipsManager._Instance = nil
 
+local isLoading = false
+
+local tipsStrList = {}
+
 function TipsManager.ShowTips(str)
     local list = TipsManager.tipsList
-    local tip
     if #list > 0 then
-        tip = table.remove(list, 1)
+        -- 复用
+        local tip = table.remove(list, 1)
+        TipsManager.ShowNewTips(tip, str)
     else
-        if TipsManager._Instance == nil then
-            TipsManager._Instance = ResouceManager:LoadPrefab("Tips")
+        if TipsManager._Instance == nil and not isLoading then
+            isLoading = true
+            table.insert(tipsStrList, #tipsStrList + 1, str)
+            UI.LoadPrefabAsync("Tips", function (obj)
+                isLoading = false
+                TipsManager._Instance = obj
+                -- 加载中 遍历
+                for k, v in ipairs(tipsStrList) do
+                    TipsManager.ShowNewTips(nil, v)
+                end
+            end)
+            elseif not isLoading then
+                TipsManager.ShowNewTips(nil, str)
+                else
+                    table.insert(tipsStrList, #tipsStrList + 1, str)
         end
-        local clone = GameObject.Instantiate(TipsManager._Instance)
-        tip = Tips.Create(clone)
+      
     end
-    print(tip)
-    tip:ShowTips(str)
-    return tip
+end
+
+function TipsManager.ShowNewTips(tips, str)
+    if tips == nil then
+        local clone = GameObject.Instantiate(TipsManager._Instance)
+        tips = Tips.Create(clone)
+    end
+    tips:ShowTips(str)
 end
 
 --隐藏 并放入列表以便复用
