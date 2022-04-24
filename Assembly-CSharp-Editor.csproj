@@ -44,9 +44,7 @@
     <ImplicitlyExpandNETStandardFacades>false</ImplicitlyExpandNETStandardFacades>
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
-  <ItemGroup>     <Compile Include="Assets\Demigiant\DOTweenPro\Editor\DOTweenAnimationInspector.cs" />
-     <Compile Include="Assets\Demigiant\DOTweenPro\Editor\DOTweenPreviewManager.cs" />
-     <Compile Include="Assets\XLua\Editor\ExampleConfig.cs" />
+  <ItemGroup>     <Compile Include="Assets\XLua\Editor\ExampleConfig.cs" />
      <Compile Include="Assets\XLua\Examples\13_BuildFromCLI\Editor\BuildFromCLI.cs" />
      <Compile Include="Assets\XLua\Src\Editor\Generator.cs" />
      <Compile Include="Assets\XLua\Src\Editor\Hotfix.cs" />
@@ -302,12 +300,6 @@
  </Reference>
  <Reference Include="DOTweenEditor">
  <HintPath>D:/ChromeCoreDownloads/Unity_Lua_Demo/Assets/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
- </Reference>
- <Reference Include="DOTweenPro">
- <HintPath>D:/ChromeCoreDownloads/Unity_Lua_Demo/Assets/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
- </Reference>
- <Reference Include="DOTweenProEditor">
- <HintPath>D:/ChromeCoreDownloads/Unity_Lua_Demo/Assets/Demigiant/DOTweenPro/Editor/DOTweenProEditor.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
  <HintPath>D:/ChromeCoreDownloads/Unity_Lua_Demo/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
