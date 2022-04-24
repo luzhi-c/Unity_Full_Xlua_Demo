@@ -75,71 +75,6 @@
      <Compile Include="Assets\XLua\Examples\11_RawObject\RawObjectTest.cs" />
      <Compile Include="Assets\XLua\Examples\12_ReImplementInLua\ReImplementInLua.cs" />
      <Compile Include="Assets\XLua\Examples\ExampleGenConfig.cs" />
-     <Compile Include="Assets\XLua\Gen\DelegatesGensBridge.cs" />
-     <Compile Include="Assets\XLua\Gen\DG_Tweening_Core_ABSSequentiableWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\DG_Tweening_Core_TweenerCore_3_UnityEngine_Vector3_UnityEngine_Vector3_DG_Tweening_Plugins_Options_VectorOptions_Wrap.cs" />
-     <Compile Include="Assets\XLua\Gen\DG_Tweening_DOTweenWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\DG_Tweening_DOVirtualWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\DG_Tweening_EaseFactoryWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\DG_Tweening_SequenceWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\DG_Tweening_ShortcutExtensionsWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\DG_Tweening_TweenerWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\DG_Tweening_TweenExtensionsWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\DG_Tweening_TweenParamsWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\DG_Tweening_TweenSettingsExtensionsWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\DG_Tweening_TweenWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\EnumWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\PackUnpack.cs" />
-     <Compile Include="Assets\XLua\Gen\System_Collections_Generic_List_1_System_Int32_Wrap.cs" />
-     <Compile Include="Assets\XLua\Gen\System_Collections_IEnumeratorBridge.cs" />
-     <Compile Include="Assets\XLua\Gen\System_ObjectWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\Tutorial_BaseClassWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\Tutorial_CSCallLua_ItfDBridge.cs" />
-     <Compile Include="Assets\XLua\Gen\Tutorial_DerivedClassExtensionsWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\Tutorial_DerivedClassWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\Tutorial_ICalcWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_AnimationClipWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_AnimationCurveWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_BehaviourWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_BoundsWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_ColorWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_ComponentWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_DebugWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_GameObjectWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_KeyframeWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_LightWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_MathfWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_MonoBehaviourWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_ObjectWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_ParticleSystemWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_QuaternionWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_Ray2DWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_RayWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_RendererWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_ResourcesWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_SkinnedMeshRendererWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_TextAssetWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_TimeWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_TransformWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_Vector2Wrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_Vector3Wrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_Vector4Wrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_WaitForSecondsWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\WrapPusher.cs" />
-     <Compile Include="Assets\XLua\Gen\XLuaGenAutoRegister.cs" />
-     <Compile Include="Assets\XLua\Gen\XLuaTest_BaseTestWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\XLuaTest_Foo1ChildWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\XLuaTest_Foo1ParentWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\XLuaTest_Foo2ChildWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\XLuaTest_Foo2ParentWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\XLuaTest_FooExtensionWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\XLuaTest_FooWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\XLuaTest_IExchangerBridge.cs" />
-     <Compile Include="Assets\XLua\Gen\XLuaTest_InvokeLua_ICalcBridge.cs" />
-     <Compile Include="Assets\XLua\Gen\XLuaTest_LuaBehaviourWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\XLuaTest_MyStructWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\XLuaTest_NoGcWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\XLuaTest_PeddingWrap.cs" />
      <Compile Include="Assets\XLua\Src\CodeEmit.cs" />
      <Compile Include="Assets\XLua\Src\CopyByValue.cs" />
      <Compile Include="Assets\XLua\Src\DelegateBridge.cs" />
@@ -179,7 +114,6 @@
      <None Include="Assets\XLua\Tutorial\LoadLuaScript\ByFile\Resources\byfile.lua.txt" />
      <None Include="Assets\Lua\Base\UIBase.lua.txt" />
      <None Include="Assets\XLua\Examples\06_Coroutine\Resources\coruntine_test.lua.txt" />
-     <None Include="Assets\XLua\Gen\link.xml" />
      <None Include="Assets\Lua\Main.lua.txt" />
      <None Include="Assets\XLua\Resources\xlua\util.lua.txt" />
      <None Include="Assets\XLua\Examples\03_UIEvent\ButtonInteraction.lua.txt" />
@@ -220,9 +154,6 @@
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>D:/ChromeCoreDownloads/Unity_Lua_Demo/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>D:/ChromeCoreDownloads/Unity_Lua_Demo/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine">
  <HintPath>D:/Unity3D/2020.2.1f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
