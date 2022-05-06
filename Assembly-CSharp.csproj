@@ -51,10 +51,19 @@
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
+     <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenAnimation.cs" />
+     <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenProShortcuts.cs" />
+     <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenTextMeshPro.cs" />
+     <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenTk2d.cs" />
      <Compile Include="Assets\Scripts\Base\SingletenBase.cs" />
      <Compile Include="Assets\Scripts\GameStart.cs" />
      <Compile Include="Assets\Scripts\Manager\ResourceManager.cs" />
      <Compile Include="Assets\Scripts\MeshTest.cs" />
+     <Compile Include="Assets\UI\source\Shaders\GuideScript\CircleGuide.cs" />
+     <Compile Include="Assets\UI\source\Shaders\GuideScript\GuideBase.cs" />
+     <Compile Include="Assets\UI\source\Shaders\GuideScript\GuideController.cs" />
+     <Compile Include="Assets\UI\source\Shaders\GuideScript\GuidePanel.cs" />
+     <Compile Include="Assets\UI\source\Shaders\GuideScript\RectGuide.cs" />
      <Compile Include="Assets\XLua\Examples\01_Helloworld\Helloworld.cs" />
      <Compile Include="Assets\XLua\Examples\02_U3DScripting\LuaBehaviour.cs" />
      <Compile Include="Assets\XLua\Examples\04_LuaObjectOrented\InvokeLua.cs" />
@@ -165,8 +174,10 @@
      <Compile Include="Assets\XLua\Tutorial\LoadLuaScript\ByString\ByString.cs" />
      <Compile Include="Assets\XLua\Tutorial\LoadLuaScript\Loader\CustomLoader.cs" />
      <Compile Include="Assets\XLua\Tutorial\LuaCallCSharp\LuaCallCs.cs" />
+     <None Include="Assets\Demigiant\DOTweenPro\readme.txt" />
      <None Include="Assets\Lua\View\Base\Tips.lua.txt" />
      <None Include="Assets\XLua\Examples\07_AsyncTest\Resources\message_box.lua.txt" />
+     <None Include="Assets\UI\source\Shaders\CircleGuide.shader" />
      <None Include="Assets\XLua\Examples\06_Coroutine\Resources\cs_coroutine.lua.txt" />
      <None Include="Assets\Lua\Manager\UIManager.lua.txt" />
      <None Include="Assets\XLua\Examples\02_U3DScripting\LuaTestScript.lua.txt" />
@@ -180,6 +191,7 @@
      <None Include="Assets\XLua\Resources\xlua\util.lua.txt" />
      <None Include="Assets\XLua\Examples\03_UIEvent\ButtonInteraction.lua.txt" />
      <None Include="Assets\Demigiant\DOTween\readme.txt" />
+     <None Include="Assets\UI\source\Shaders\RectGuide.shader" />
      <None Include="Assets\XLua\Resources\perf\profiler.lua.txt" />
      <None Include="Assets\Lua\GameStart.lua.txt" />
      <None Include="Assets\Demigiant\DemiLib\Core\DemiLib.xml" />
@@ -405,6 +417,9 @@
  </Reference>
  <Reference Include="DOTween">
  <HintPath>D:/ChromeCoreDownloads/Unity_Lua_Demo/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTweenPro">
+ <HintPath>D:/ChromeCoreDownloads/Unity_Lua_Demo/Assets/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>D:/Unity3D/2020.2.1f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

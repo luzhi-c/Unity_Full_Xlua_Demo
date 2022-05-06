@@ -30,7 +30,6 @@ end
 function UIBase:FindComponent(root)
     for i = 0, root.childCount - 1 do
         local child = root:GetChild(i)
-        print(child)
         if child.gameObject:CompareTag("UIComponent") then
             self.uiComponent[child.gameObject.name] = child.gameObject
         end
